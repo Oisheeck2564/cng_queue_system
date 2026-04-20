@@ -1,0 +1,45 @@
+body {
+    background: linear-gradient(to right, #eef2f3, #dfe9f3);
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.card {
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.btn {
+    border-radius: 30px;
+}
+
+.hero {
+    padding: 60px;
+    text-align: center;
+}
+
+.map-box {
+    border-radius: 15px;
+    overflow: hidden;
+}
+#map {
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+.nav-link:hover {
+    color: #17a2b8 !important;
+}
+.top-bar {
+    background: #17a2b8;
+    color: white;
+    padding: 8px;
+}
+
+.card {
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.btn {
+    border-radius: 30px;
+}
