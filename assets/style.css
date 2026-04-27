@@ -1,45 +1,198 @@
+/* ===== BODY ===== */
+/* ===== GLOBAL BACKGROUND (ALL PAGES) ===== */
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
 body {
-    background: linear-gradient(to right, #eef2f3, #dfe9f3);
-    font-family: 'Segoe UI', sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    background: linear-gradient(135deg, #711d51, #e4f87f) !important;
 }
 
-.card {
-    border: none;
+.container, .container-fluid {
+    background: transparent !important;
+}
+
+.container {
+    flex: 1;
+}
+
+/* ===== HERO SECTION ===== */
+.hero {
+    padding: 60px 20px;
+    min-height: auto;
+}
+
+@media (min-width: 768px) {
+    .hero {
+        min-height: 90vh;
+        display: flex;
+        align-items: center;
+    }
+}
+
+/* ===== CARD DESIGN ===== */
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    width: 100%;
+}
+
+.card-container > div:nth-child(4) {
+    grid-column: 3;
+}
+
+@media (max-width: 768px) {
+    .card-container {
+        grid-template-columns: 1fr;
+    }
+
+    .card-container > div:nth-child(4) {
+        grid-column: 1;
+    }
+}
+
+/* ===== GLASS CARD ===== */
+.glass-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(12px);
     border-radius: 15px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    padding: 30px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.25);
 }
 
+/* ===== BUTTONS ===== */
 .btn {
     border-radius: 30px;
+    padding: 10px 20px;
 }
 
-.hero {
-    padding: 60px;
+.btn-custom {
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 8px;
+}
+
+/* ===== FEATURES ===== */
+.feature-box {
+    margin-top: 20px;
+}
+
+.feature-box p {
+    margin-bottom: 8px;
+}
+
+/* ===== HERO IMAGE ===== */
+.hero-img {
+    width: 100%;
+    border-radius: 12px;
+    margin-top: 20px;
+    object-fit: cover;
+    max-height: 250px;
+}
+
+@media (min-width: 768px) {
+    .hero-img {
+        max-height: 320px;
+    }
+}
+
+/* ===== NAVBAR ===== */
+.nav-link {
+    transition: 0.3s;
+}
+
+.nav-link:hover {
+    color: #17a2b8;
+}
+
+/* ===== TOP BAR ===== */
+.top-bar {
+    background: #2d6f7a;
+    color: white;
+    padding: 8px;
     text-align: center;
 }
 
+/* ===== MAP ===== */
 .map-box {
     border-radius: 15px;
     overflow: hidden;
 }
+
 #map {
     border-radius: 15px;
     box-shadow: 0 10px 25px rgba(0,0,0,0.2);
 }
-.nav-link:hover {
-    color: #17a2b8 !important;
-}
-.top-bar {
-    background: #17a2b8;
-    color: white;
-    padding: 8px;
+
+/* ===== RESPONSIVE TEXT ===== */
+@media (max-width: 767px) {
+    h1 {
+        font-size: 26px;
+    }
+
+    p {
+        font-size: 14px;
+    }
 }
 
-.card {
-    border-radius: 15px;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+/* ===== FOOTER ===== */
+.footer {
+    background: #f4f3f5;
+    color: rgb(12, 1, 1);
+    width: 100%;
+    padding: 15px 0;
+    margin-top: auto;
+    text-align: center;
 }
 
-.btn {
-    border-radius: 30px;
+/* ===================================================
+   🚀 SLIDE-IN POPUP NOTIFICATION (NEW ADDITION)
+=================================================== */
+
+.slide-toast {
+    position: fixed;
+    top: 20px;
+    right: -350px;
+    min-width: 280px;
+    max-width: 320px;
+    padding: 15px 18px;
+    border-radius: 10px;
+    color: #fff;
+    font-weight: 500;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+    z-index: 9999;
+    transition: all 0.5s ease;
+}
+
+.slide-toast.show {
+    right: 20px;
+}
+
+.slide-success {
+    background: #28a745;
+}
+
+.slide-info {
+    background: #0d6efd;
+}
+
+.slide-warning {
+    background: #ffc107;
+    color: #000;
+}
+
+.slide-danger {
+    background: #dc3545;
+}
+
+.slide-close {
+    float: right;
+    cursor: pointer;
+    font-weight: bold;
 }

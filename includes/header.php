@@ -1,27 +1,22 @@
+<?php
+include __DIR__ . '/../config/db.php';
+?>
 <!DOCTYPE html>
 <html>
 <head>
 <title>CNG Queue System</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-
 <link rel="stylesheet" href="/cng_queue_system/assets/css/style.css">
 </head>
 
 <body>
 
-<!-- TOP BAR -->
-<div class="top-bar">
-    <div class="container d-flex justify-content-between">
-        <span>📧 info@gmail.com</span>
-        <span>📞 7896541236</span>
-    </div>
-</div>
-
 <!-- NAVBAR -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<nav class="navbar navbar-expand-lg navbar-dark  bg-dark">
 <div class="container">
-<a class="navbar-brand fw-bold">CNG Queue System</a>
+<a class="navbar-brand fw-bold" href="/cng_queue_system">CNG Queue System</a>
 
 <ul class="navbar-nav ms-auto">
 <li class="nav-item"><a class="nav-link" href="/cng_queue_system">Home</a></li>

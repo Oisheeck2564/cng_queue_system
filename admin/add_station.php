@@ -14,7 +14,56 @@ if ($_POST) {
     echo "<p class='text-success'>Station Added!</p>";
 }
 ?>
+<style>
+    body {
+        background: linear-gradient(135deg, #1d2671, #c33764);
+        color: #fff;
+    }
 
+    .hero {
+        padding: 60px 0;
+    }
+
+    @media (min-width: 768px) {
+        .hero {
+            min-height: 90vh;
+            display: flex;
+            align-items: center;
+        }
+    }
+
+    .glass-card {
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(12px);
+        border-radius: 15px;
+        padding: 30px;
+        box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+    }
+
+    .btn-custom {
+        padding: 12px;
+        font-size: 16px;
+        border-radius: 8px;
+    }
+
+    .feature-box p {
+        margin-bottom: 8px;
+    }
+
+    img.hero-img {
+        width: 100%;
+        border-radius: 10px;
+        margin-top: 20px;
+        object-fit: cover;
+        max-height: 250px;
+    }
+
+    @media (min-width: 768px) {
+        img.hero-img {
+            max-height: 320px;
+        }
+    }
+</style>
 <h2>Add Station</h2>
 
 <form method="POST">
